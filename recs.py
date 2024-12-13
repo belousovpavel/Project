@@ -22,12 +22,6 @@ def is_party_suitable(user, party):
     suitable_activities = any(activity in user['Активности'] for activity in party['Активности'])
     suitable_place = user['Место'] and party['Место'] in user['Место']
 
-    # Введение поясняющих переменных
-    is_age_suitable = suitable_age
-    is_genre_suitable = suitable_genres
-    is_activity_suitable = suitable_activities
-    is_place_suitable = suitable_place
-
     return is_age_suitable and is_genre_suitable and is_activity_suitable and is_place_suitable
 
 
